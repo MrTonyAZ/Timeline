@@ -1,0 +1,14 @@
+$primary-color: #1E90FF;
+$secondary-color: #87CEFA;
+
+@mixin pointLeft ($position, $width, $height) {
+  position: $position;
+  width: $width;
+  height: $height;
+}
+
+@mixin fonts ($font-size, $color, $text-align) {
+  font-size: $font-size;
+  color: $color;
+  text-align: $text-align;
+}

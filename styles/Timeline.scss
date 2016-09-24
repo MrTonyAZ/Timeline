@@ -1,0 +1,172 @@
+@import "partials/variables";
+
+main {
+    width: 45em;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+  .display {
+    position: relative;
+    overflow: hidden;
+  }
+
+    .timePanel {
+      position: absolute;
+      bottom: 0.111%;
+      top: 3%;
+      width: 17%;
+      border-right: 0.4em solid $secondary-color;
+    }
+
+      .date {
+        @include fonts (1.35%, #A9A9A9, center);
+      }
+
+      .time {
+        @include fonts (2em, $secondary-color, left);
+      }
+
+      .bullet {
+        position: relative;
+        display: inline-block;
+        width: 1.3em;
+      	height: 1.3em;
+      	border-radius: 1.3em;
+        background: $primary-color;
+        border: 0.35em solid $secondary-color;
+        left: 6.87em;
+        top: -3.4em;
+      }
+
+      .bullet p {
+        @include fonts (0.8em, #FFFFFF, center);
+        line-height: 1.8em;
+      }
+
+      .triangleTop {
+        @include pointLeft (absolute, 0, 0);
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right:10px solid $secondary-color;
+        top: 0.3em;
+        left: 3em;
+      }
+
+      .triangle {
+        @include pointLeft (absolute, 0, 0);
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right:10px solid $primary-color;
+        top: 0.3em;
+        left: 3em;
+      }
+
+    .contentPanelTop {
+      float: right;
+      width: 67%;
+      padding: 4%;
+      margin: 1%;
+      background: $secondary-color;
+      border-radius: 0.2em;
+    }
+
+    .contentPanel {
+      float: right;
+      width: 67%;
+      padding: 4%;
+      margin: 1%;
+      background: $primary-color;
+      border-radius: 0.2em;
+    }
+
+      h1 {
+        @include fonts (1.3em, #FFFFFF, left);
+        font-weight: 600;
+        line-height: 1.5em;
+        border-bottom: 0.05em solid #FFFFFF;
+        margin-bottom: 1em;
+      }
+
+      p {
+        @include fonts (1em, #FFFFFF, left);
+        line-height: 1.2em;
+      }
+
+@media only screen and (max-width: 1000px) {
+  main {
+    width: 50em;
+  }
+    .bullet {
+      left: 7.7em;
+    }
+    .triangleTop, .triangle {
+        left: 3.5em;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+  main {
+    width: 40em;
+  }
+    .bullet {
+      top: -3.4em;
+      left: 6em;
+    }
+    .triangleTop, .triangle {
+      top: 0.2em;
+      left: 2.7em;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+  main {
+    width: 90%;
+  }
+
+    .timePanel {
+      position: static;
+      margin-top: 4em;
+      bottom: 0;
+      top: 0;
+      width: 90%;
+      border-right: 0.4em solid #FFFFFF;
+    }
+
+      .date {
+        @include fonts (2em, $secondary-color, left);
+        margin-top: 2em;
+      }
+
+      .bullet {
+        width: 5em;
+        height: 5em;
+        border-radius: 5em;
+        left: 7.4em;
+        top: -0.5em;
+      }
+
+      .bullet p {
+        font-size: 3em;
+      }
+
+      .triangleTop {
+        visibility: hidden;
+      }
+
+      .triangle {
+        visibility: hidden;
+      }
+
+    .contentPanelTop {
+      float: none;
+      width: 90%;
+    }
+
+    .contentPanel {
+      float: none;
+      width: 90%;
+    }
+
+}
